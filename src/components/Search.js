@@ -12,31 +12,33 @@ import loupe from '../../assets/loupe.png'
 
 const windowWidth = Dimensions.get('window').width;
 
-const Search = ({data, handleSearch}) => {
+const Search = ({filterPokemon, handleSearch, data}) => {
 
-    // const [ query, updateQuery] = useSearch()
-    const [query, setQuery] = useState('')
+    const [query, setQuery] = useState(null)
     console.log(query, 'query');
 
     const updateQuery = (query) => {
 
         setQuery(query)
 
-        const searchRes = data.filter(query => query)
+        const searchRes = filterPokemon.filter(query => query)
             .filter(newQuery => newQuery.name.toLowerCase()
             .includes(query.toLowerCase()))
 
         console.log(searchRes, 'rsdadas');
-        
+
         if(query == ''){
             handleSearch(data)
-        }else{
+            console.log('Estomos mandando', data);
+        } else {
             handleSearch(searchRes)
         }
-
+        
 
         return searchRes
     }
+    
+    
 
     return (
         <View style={styles.container}>

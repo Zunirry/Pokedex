@@ -22,17 +22,21 @@ const numRows = 5
 const Home = ({ navigation }) => {
 
     const [data, setData] = useState()
+    const [filterPokemon, setFilterPokemon] = useState()
 
     useEffect(() => {
 
         fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10220`)
             .then(res => res.json())
-            .then(res => setData(res.results))
+            .then(res => (
+                setData(res.results),
+                setFilterPokemon(res.results)
+            ))
 
     }, [fetch])
 
     const handleSearch = (data) => {
-        setData(data)
+        setFilterPokemon(data)
     }
 
     console.log(data, 'data');
@@ -58,10 +62,10 @@ const Home = ({ navigation }) => {
                 <Header />
             </View>
             <View>
-                <Search data={data} handleSearch={handleSearch} />
+                <Search filterPokemon={filterPokemon} handleSearch={handleSearch} data={data}/>
             </View>
             <FlatList
-                data={data}
+                data={filterPokemon}
                 renderItem={renderItem}
                 numColumns={numColumns}
             />
