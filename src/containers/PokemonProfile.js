@@ -6,14 +6,14 @@ import {
     TouchableOpacity,
     StyleSheet
 } from 'react-native'
-import { ProgressBar, Colors } from 'react-native-paper';
+import { ProgressBar } from 'react-native-paper';
 import Header from '../components/Header'
 import back from '../../assets/back.png'
 
 const PokemonProfile = ({ route, navigation }) => {
 
 
-    const { item, handleImg } = route.params
+    const { item } = route.params
 
     console.log(item.url, 'item');
 
@@ -23,9 +23,7 @@ const PokemonProfile = ({ route, navigation }) => {
         fetch(item.url)
             .then(res => res.json())
             .then(res => (
-                setCurrentPokemon(res),
-                console.log(handleImg(res), 'handleimg')
-
+                setCurrentPokemon(res)
             ))
     }, [fetch])
 

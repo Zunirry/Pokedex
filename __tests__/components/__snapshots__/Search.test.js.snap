@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> Render of Search component  1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../assets/loupe.png",
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "#e0e0e0",
+        "borderRadius": 10,
+        "height": 49,
+        "width": 25,
+      }
+    }
+    tintColor="#b0b0b0"
+  />
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Search"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "backgroundColor": "#e0e0e0",
+        "borderBottomRightRadius": 10,
+        "borderTopRightRadius": 10,
+        "marginVertical": 5,
+        "paddingHorizontal": 10,
+        "width": 667.5,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value={null}
+  />
+</View>
+`;

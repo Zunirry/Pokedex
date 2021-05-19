@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
     View,
-    Text,
     Image,
     TextInput,
     Dimensions,
     StyleSheet
  } from 'react-native'
 import loupe from '../../assets/loupe.png'
-// import useSearch from './hook/useSearch'
 
 const windowWidth = Dimensions.get('window').width;
 
 const Search = ({filterPokemon, handleSearch, data}) => {
 
-    // console.log(data, 'data');
 
     const [query, setQuery] = useState(null)
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import {
     View,
-    Text,
     Image,
     Dimensions,
     StyleSheet
@@ -9,7 +8,6 @@ import {
 import logo from '../../assets/pokemon.svg.png'
 
 const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 
 const Header = () => {
     return (

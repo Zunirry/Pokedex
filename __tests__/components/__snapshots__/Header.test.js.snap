@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Render of Header component  1`] = `
+<View>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../assets/pokemon.svg.png",
+      }
+    }
+    style={
+      Object {
+        "height": 80,
+        "width": 450,
+      }
+    }
+  />
+</View>
+`;

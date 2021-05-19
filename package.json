@@ -10,6 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "isomorphic-fetch": "^3.0.0",
+    "jest-fetch-mock": "^3.0.3",
     "react": "17.0.1",
     "react-native": "0.64.1",
     "react-native-gesture-handler": "^1.10.3",
@@ -31,5 +35,8 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "transformIgnorePatterns": [
+    "node_modules/(?!(react-native|pokemon|react-native-button)/)"
+  ]
 }
