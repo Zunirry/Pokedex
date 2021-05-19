@@ -14,8 +14,9 @@ const windowWidth = Dimensions.get('window').width;
 
 const Search = ({filterPokemon, handleSearch, data}) => {
 
+    // console.log(data, 'data');
+
     const [query, setQuery] = useState(null)
-    console.log(query, 'query');
 
     const updateQuery = (query) => {
 
@@ -25,11 +26,9 @@ const Search = ({filterPokemon, handleSearch, data}) => {
             .filter(newQuery => newQuery.name.toLowerCase()
             .includes(query.toLowerCase()))
 
-        console.log(searchRes, 'rsdadas');
 
         if(query == ''){
             handleSearch(data)
-            console.log('Estomos mandando', data);
         } else {
             handleSearch(searchRes)
         }
